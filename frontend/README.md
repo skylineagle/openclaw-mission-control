@@ -2,7 +2,7 @@
 
 This package is the **Next.js** web UI for OpenClaw Mission Control.
 
-- Talks to the Mission Control **backend** over HTTP (typically `http://localhost:8000`).
+- Talks to the Mission Control **backend** over HTTP (typically `http://localhost:7000`).
 - Uses **React Query** for data fetching.
 - Supports two auth modes:
   - **local** shared bearer token mode (self-host default)
@@ -46,13 +46,13 @@ The frontend reads configuration from standard Next.js env files (`.env.local`, 
 
 Base URL of the backend API.
 
-- Default for local dev: `http://localhost:8000`
+- Default for local dev: `http://localhost:7000`
 - Used by the generated API client and helpers (see `src/lib/api-base.ts` and `src/api/mutator.ts`).
 
 Example:
 
 ```env
-NEXT_PUBLIC_API_URL=http://localhost:8000
+NEXT_PUBLIC_API_URL=http://localhost:7000
 ```
 
 ### Authentication mode
@@ -90,13 +90,13 @@ We generate a typed client from the backend OpenAPI schema using **Orval**:
 By default, Orval reads:
 
 - `ORVAL_INPUT` (if set), otherwise
-- `http://127.0.0.1:8000/openapi.json`
+- `http://127.0.0.1:7000/openapi.json`
 
 Example:
 
 ```bash
 # from frontend/
-ORVAL_INPUT=http://localhost:8000/openapi.json npm run api:gen
+ORVAL_INPUT=http://localhost:7000/openapi.json npm run api:gen
 ```
 
 ### Auth header / Clerk token injection
@@ -154,7 +154,7 @@ cp .env.example .env.local
 
 ### Frontend loads, but API calls fail (CORS / network errors)
 
-- Confirm backend is up: http://localhost:8000/healthz
+- Confirm backend is up: http://localhost:7000/healthz
 - Confirm `NEXT_PUBLIC_API_URL` points to the correct host/port.
 - If accessing from another device (LAN), use a reachable backend URL (not `localhost`).
 

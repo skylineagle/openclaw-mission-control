@@ -2,7 +2,7 @@
 
 This directory contains the **Mission Control backend API** (FastAPI + SQLModel) and its database migrations (Alembic).
 
-- Default API base URL: http://localhost:8000
+- Default API base URL: http://localhost:7000
 - Health endpoints: `/healthz`, `/readyz`
 - API routes: `/api/v1/*`
 
@@ -32,7 +32,7 @@ uv run uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 Verify:
 
 ```bash
-curl -f http://localhost:8000/healthz
+curl -f http://localhost:7000/healthz
 ```
 
 ## Configuration / environment variables

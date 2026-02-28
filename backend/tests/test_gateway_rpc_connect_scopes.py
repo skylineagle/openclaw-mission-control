@@ -135,7 +135,7 @@ def test_build_connect_params_passes_nonce_to_device_payload(
         ("wss://gateway.example/ws", "https://gateway.example"),
         ("ws://gateway.example:8080/ws", "http://gateway.example:8080"),
         ("wss://gateway.example:8443/ws", "https://gateway.example:8443"),
-        ("ws://[::1]:8000/ws", "http://[::1]:8000"),
+        ("ws://[::1]:7000/ws", "http://[::1]:7000"),
     ],
 )
 def test_build_control_ui_origin(gateway_url: str, expected_origin: str) -> None:

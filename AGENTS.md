@@ -15,9 +15,9 @@
 - `docker compose -f compose.yml --env-file .env up -d --build`: run full stack.
 - Fast local loop:
   - `docker compose -f compose.yml --env-file .env up -d db`
-  - `cd backend && uv run uvicorn app.main:app --reload --port 8000`
+  - `cd backend && uv run uvicorn app.main:app --reload --port 7000`
   - `cd frontend && npm run dev`
-- `make api-gen`: regenerate frontend API client (backend must be on `127.0.0.1:8000`).
+- `make api-gen`: regenerate frontend API client (backend must be on `127.0.0.1:7000`).
 
 ## Coding Style & Naming Conventions
 - Python: Black + isort + flake8 + strict mypy. Max line length is 100. Use `snake_case`.

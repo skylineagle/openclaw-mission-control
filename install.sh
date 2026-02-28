@@ -635,7 +635,7 @@ main() {
     if [[ -n "$FORCE_BACKEND_PORT" ]]; then
       backend_port="$FORCE_BACKEND_PORT"
     else
-      backend_port="$(prompt_with_default "Backend port" "8000")"
+      backend_port="$(prompt_with_default "Backend port" "7000")"
     fi
     is_valid_port "$backend_port" && break
     warn "Invalid backend port: $backend_port"

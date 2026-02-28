@@ -43,7 +43,7 @@ COPY backend/app ./app
 COPY backend/templates ./templates
 
 # Default API port
-EXPOSE 8000
+EXPOSE 7000
 
 # Run the API
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "7000"]

@@ -112,7 +112,7 @@ jobs:
         env:
           # Keep CI builds deterministic.
           NEXT_TELEMETRY_DISABLED: "1"
-          NEXT_PUBLIC_API_URL: "http://localhost:8000"
+          NEXT_PUBLIC_API_URL: "http://localhost:7000"
           NEXT_PUBLIC_AUTH_MODE: "local"
         run: |
           make frontend-lint
@@ -215,7 +215,7 @@ jobs:
 
       - name: Start frontend (dev server)
         env:
-          NEXT_PUBLIC_API_URL: "http://localhost:8000"
+          NEXT_PUBLIC_API_URL: "http://localhost:7000"
           NEXT_PUBLIC_AUTH_MODE: "local"
           NEXT_TELEMETRY_DISABLED: "1"
         run: |
@@ -230,7 +230,7 @@ jobs:
 
       - name: Run Cypress E2E
         env:
-          NEXT_PUBLIC_API_URL: "http://localhost:8000"
+          NEXT_PUBLIC_API_URL: "http://localhost:7000"
           NEXT_PUBLIC_AUTH_MODE: "local"
           NEXT_TELEMETRY_DISABLED: "1"
         run: |

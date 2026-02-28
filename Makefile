@@ -139,7 +139,7 @@ frontend-build: frontend-tooling ## Build frontend (next build)
 	$(NODE_WRAP) --cwd $(FRONTEND_DIR) npm run build
 
 .PHONY: api-gen
-api-gen: frontend-tooling ## Regenerate TS API client (requires backend running at 127.0.0.1:8000)
+api-gen: frontend-tooling ## Regenerate TS API client (requires backend running at 127.0.0.1:7000)
 	$(NODE_WRAP) --cwd $(FRONTEND_DIR) npm run api:gen
 
 .PHONY: rq-worker
